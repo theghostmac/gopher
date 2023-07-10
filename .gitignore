@@ -7,3 +7,4 @@ vendor/
 
 # Ignore the go module cache
 go.sum
+.idea

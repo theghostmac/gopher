@@ -1,8 +1,10 @@
 package commands
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func ExecuteCommands(command string, args []string) {
+func ExecuteCommand(command string, args []string) {
 	switch command {
 	case "new":
 		if len(args) < 1 {
@@ -16,4 +18,3 @@ func ExecuteCommands(command string, args []string) {
 		fmt.Println("Unknown command: ", command)
 	}
 }
-

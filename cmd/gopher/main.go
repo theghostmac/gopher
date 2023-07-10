@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/theghostmac/gopher/internam/core/commands"
+	"github.com/theghostmac/gopher/internal/core/commands"
 )
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("Usage: goher <command> [arguments]")
+		fmt.Println("Usage: gopher <command> [arguments]")
 		os.Exit(0)
 	}
 
