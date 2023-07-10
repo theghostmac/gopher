@@ -1,0 +1,9 @@
+# Ignore compiled binaries and object files
+*.exe
+*.o
+
+# Ignore the vendor directory
+vendor/
+
+# Ignore the go module cache
+go.sum

@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Create the necessary directories
+mkdir -p cmd/gopher
+mkdir -p internal/core/commands
+mkdir -p internal/core/config
+mkdir -p internal/core/plugin
+mkdir -p internal/plugins/plugin1
+mkdir -p internal/plugins/plugin2
+
+# Create the main.go file for the gopher command
+cat > cmd/gopher/main.go << EOF
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, gopher!")
+}
+EOF
+
+# Create placeholder files for core commands
+touch internal/core/commands/build.go
+touch internal/core/commands/init.go
+touch internal/core/commands/run.go
+touch internal/core/commands/test.go
+
+# Create placeholder files for core configuration
+touch internal/core/config/config.go
+
+# Create placeholder files for core plugin management
+touch internal/core/plugin/plugin.go
+
+# Create placeholder files for individual plugins
+touch internal/plugins/plugin1/main.go
+touch internal/plugins/plugin2/main.go
+
+# Create the necessary gitignore file
+cat > .gitignore << EOF
+# Ignore compiled binaries and object files
+*.exe
+*.o
+
+# Ignore the vendor directory
+vendor/
+
+# Ignore the go module cache
+go.sum
+EOF
+
