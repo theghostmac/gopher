@@ -12,8 +12,6 @@ help you build, test, and run your Go applications efficiently.
 # Shout out
 Shout out to the `os.WriteFile()` ([here](https://cs.opensource.google/go/go/+/go1.20.5:src/os/file.go;l=720)) function for the extra abilities. Well engineered.
 
-Certainly! Here's the updated content for the `README.md` file with the instructions for adding `gopher` to the `PATH` and other modifications you mentioned:
-
 ## Installation
 
 To install Gopher, you need to have Go installed on your machine. 
