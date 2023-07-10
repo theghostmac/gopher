@@ -15,7 +15,7 @@ Shout out to the `os.WriteFile()` ([here](https://cs.opensource.google/go/go/+/g
 ## Installation
 
 To install Gopher, you need to have Go installed on your machine. 
-You can download the binary for your operating system from the [Releases](https://github.com/your-username/gopher/releases) section.
+You can download the binary for your operating system from the [Releases](https://github.com/theghostmac/gopher/releases) section.
 
 ### Adding Gopher to the PATH
 
