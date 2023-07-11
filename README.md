@@ -1,7 +1,9 @@
 # Gopher
 
 Gopher is a command-line tool written in Go for managing Go projects. It provides a set of features to 
-help you build, test, and run your Go applications efficiently.
+help you build, test, and run your Go applications efficiently. 
+
+Read about the project [here](https://theghostmac.github.io/posts/gopher).
 
 ![Demo of gopher](gopher-demo.png)
 
