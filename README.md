@@ -3,6 +3,8 @@
 Gopher is a command-line tool written in Go for managing Go projects. It provides a set of features to 
 help you build, test, and run your Go applications efficiently.
 
+![Demo of gopher](gopher-demo.png)
+
 ## Inspirations
 1. The inspiration for this project is the `cargo` tool owned by Rust. As a Rust developer, I have come to love cargo, and this project is born out of that mutual love for Rust and Go.
 2. Another reason I am building this is to master the use of Vim instead of smart IDEs. This idea was enforced on me by [Timothy Brymes](https://github.com/Brymes) after his first attempt at the Certified Kubernetes Administrator Exam. Hence, this project was built from the terminal alone, with Vim. 

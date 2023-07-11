@@ -3,6 +3,7 @@ package commands
 import (
 	"fmt"
 	"os"
+	"os/exec"
 	"path/filepath"
 )
 
@@ -24,6 +25,25 @@ func createProjectDirectory(projectName string) {
 	err := os.MkdirAll(projectName, 0755)
 	if err != nil {
 		fmt.Printf("Failed to create the project directory: %v\n", err)
+		os.Exit(1)
+	}
+
+	err = os.Chdir(projectName)
+	if err != nil {
+		fmt.Printf("Failed to change to project directory: %v\n", err)
+		os.Exit(1)
+	}
+
+	cmd := exec.Command("go", "mod", "init")
+	err = cmd.Run()
+	if err != nil {
+		fmt.Printf("Failed to iitialize Go modules: %v\n", err)
+		os.Exit(1)
+	}
+
+	err = os.Chdir("..")
+	if err != nil {
+		fmt.Printf("Failed to change back to the previous directory: %v\n", err)
 		os.Exit(1)
 	}
 }
