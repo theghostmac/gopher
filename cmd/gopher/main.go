@@ -9,6 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
+		/// Print the usage info for the user.
 		fmt.Println("Usage: gopher <command> [arguments]")
 		os.Exit(0)
 	}
