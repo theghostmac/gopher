@@ -22,6 +22,8 @@ func ExecuteCommand(command string, args []string) {
 		InitializeProject()
 	case "test":
 		RunTests(args)
+	case "run":
+		RunProject()
 	default:
 		fmt.Println("Unknown command: ", command)
 	}
