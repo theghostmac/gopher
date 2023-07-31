@@ -30,5 +30,14 @@ run:
 	$(GOBUILD) -o $(BINARY_NAME) ./cmd/gopher
 	./$(BINARY_NAME)
 
+# Install the application
+install:
+	$(GOBUILD) -o $(BINARY_NAME) github.com/theghostmac/gopher/cmd/gopher
+	mv $(BINARY_NAME) $(GOPATH)/bin/$(BINARY_NAME)
+
+# Uninstall the application
+uninstall:
+	rm -f $(GOPATH)/bin/$(BINARY_NAME)
+
 .PHONY: build clean test deps run
 
