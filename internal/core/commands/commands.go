@@ -14,6 +14,8 @@ func ExecuteCommand(command string, args []string) {
 		projectName := args[0]
 		flags := args[1:]
 		NewProject(projectName, flags)
+	case "add":
+		AddDependencies(args)
 	default:
 		fmt.Println("Unknown command: ", command)
 	}
