@@ -18,6 +18,10 @@ func ExecuteCommand(command string, args []string) {
 		AddDependencies(args)
 	case "build":
 		BuildProject()
+	case "init":
+		InitializeProject()
+	case "test":
+		RunTests(args)
 	default:
 		fmt.Println("Unknown command: ", command)
 	}
