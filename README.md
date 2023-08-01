@@ -19,6 +19,19 @@ To install Gopher, you need to have Go installed on your machine. Next, run the 
 ```shell
 go install github.com/theghostmac/gopher@latest
 ```
+Uninstall by running:
+```shell
+go clean -i github.com/theghostmac/gopher
+```
+
+You can also install using Make by cloning the repository and running:
+```shell
+make install
+```
+Uninstall by running:
+```shell
+make uninstall
+```
 
 ## Usage
 
