@@ -1,7 +1,7 @@
 # Future Features
 
 ## The `new` feature:
-- [ ] The `gopher new` keyword should automatically initialize a new `git` repository with the project.
+- [x] The `gopher new` keyword should automatically initialize a new `git` repository with the project.
 - [ ] The `gopher new` keyword should accept a flag `--vcs none` to exclude initializing a new `git` repository.
 
 ## The `build` feature:
@@ -11,9 +11,9 @@
 
 ## Tests support
 There will be support for running tests with `gopher`, including the following specific features:
-- [ ] The `gopher test` keyword will run tests in the entire code base, for every `*_test.go` files.
-- [ ] The `gopher test` keyword will accept a directory and/or filename.
-- [ ] Other
+- [x] The `gopher test` keyword will run tests in the entire code base, for every `*_test.go` files.
+- [x] The `gopher test` keyword will accept a directory and/or filename.
+- [x] Other
 
 
 ## go-check

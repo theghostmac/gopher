@@ -24,6 +24,13 @@ func ExecuteCommand(command string, args []string) {
 		RunTests(args)
 	case "run":
 		RunProject()
+	case "check":
+		if len(args) < 1 {
+			fmt.Println("Usage: gopher check <target_directory>")
+			return
+		}
+		targetDirectory := args[0]
+		CheckCodebase(targetDirectory)
 	default:
 		fmt.Println("Unknown command: ", command)
 	}

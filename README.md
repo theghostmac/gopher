@@ -13,85 +13,111 @@ Read about the project [here](https://theghostmac.github.io/posts/gopher).
 3. The third inspiration for this project is the need for Golang to do something new. The most novel additions to the Golang toolchain is the support for Generics and the Go workspace idea, both of which are not new anymore. 
 4. The final inspiration for this project is to try out the Microkernel architecture rumored to be suitable for systems programming. Normally, I would have written this tool in Rust,out of convenience and suitability of tools, but my conscience would not allow me.
 
-# Shout out
-Shout out to the `os.WriteFile()` ([here](https://cs.opensource.google/go/go/+/go1.20.5:src/os/file.go;l=720)) function for the extra abilities. Well engineered.
-
 ## Installation
 
-To install Gopher, you need to have Go installed on your machine. 
-You can download the binary for your operating system from the [Releases](https://github.com/theghostmac/gopher/releases) section.
-
-### Adding Gopher to the PATH
-
-To use `gopher` as a command from anywhere in your terminal, you need to add the directory containing the `gopher` binary to your 
-system's `PATH` environment variable. 
-Follow these steps based on your shell:
-
-#### Bash (`.bashrc` or `.bash_profile`)
-
-1. Open the `.bashrc` or `.bash_profile` file in your preferred text editor:
-
-```bash
-nano ~/.bashrc
+To install Gopher, you need to have Go installed on your machine. Next, run the installation:
+```shell
+go install github.com/theghostmac/gopher@latest
 ```
 
-or
+## Usage
+
+Gopher provides a set of commands to manage your Go projects efficiently. Here's how you can use each command:
+
+### `new`
+
+Create a new Go project with the specified name and project type.
 
 ```bash
-nano ~/.bash_profile
+gopher new my_project --web
 ```
 
-2. Add the following line to the file, replacing `/path/to/gopher` with the actual path to the `gopher` binary:
+Creates a new Go web project named `my_project` with a basic web server boilerplate.
 
 ```bash
-export PATH="/path/to/gopher:$PATH"
+gopher new cli_tool --app
 ```
 
-3. Save the file and exit the text editor.
+Creates a new command-line tool project named `cli_tool` with a basic application boilerplate.
 
-4. Close and reopen your terminal, or run the following command to apply the changes:
+### `add`
+
+Add external Go dependencies to your project using `go get`.
 
 ```bash
-source ~/.bashrc
+gopher add github.com/gin-gonic/gin
 ```
 
-or
+Adds the `gin` package from GitHub to your project.
+
+### `build`
+
+Build your Go project.
 
 ```bash
-source ~/.bash_profile
+gopher build
 ```
 
-#### Zsh (`.zshrc`)
+Compiles and builds your Go project, creating an executable binary.
 
-1. Open the `.zshrc` file in your preferred text editor:
+### `init`
+
+Initialize Go modules for your project.
 
 ```bash
-nano ~/.zshrc
+gopher init
 ```
 
-2. Add the following line to the file, replacing `/path/to/gopher` with the actual path to the `gopher` binary:
+Initializes Go modules for your project, allowing you to manage external dependencies easily.
+
+### `test`
+
+Run tests for your Go project.
 
 ```bash
-export PATH="/path/to/gopher:$PATH"
+gopher test
 ```
 
-3. Save the file and exit the text editor.
+Compiles and runs tests in your project, showing the test results.
 
-4. Close and reopen your terminal, or run the following command to apply the changes:
+### `run`
+
+Run your Go project.
 
 ```bash
-source ~/.zshrc
+gopher run
 ```
 
-### Usage
+Builds and executes your Go project.
 
-Gopher provides various commands to assist you in your Go project development. Here is an example of the commonly used command:
+### `check`
 
-- `gopher new <project_name>`: Creates a new Go project with the specified name.
+Check the syntax of your Go codebase or individual files for any issues.
 
-  Example: `gopher new myproject`
+```bash
+gopher check
+```
 
-Please note that the other features are still under development and will be available soon.
+Checks the entire codebase for any "TODO" comments and reports them as issues.
+
+```bash
+gopher check ./cmd
+```
+
+Checks the `cmd` directory for any "TODO" comments and reports them as issues.
+
+```bash
+gopher check main.go
+```
+
+Checks the `main.go` file for any "TODO" comments and reports them as issues.
+
+---
+
+In this updated `#Usage` section, we've provided a detailed explanation of each command and included example usage for better clarity. Users can now follow the examples to understand how to use the `gopher` app effectively for their Go projects.
+
+# Shout out
+Shout out to the `os.WriteFile()` ([here](https://cs.opensource.google/go/go/+/go1.20.5:src/os/file.go;l=720)) function for the extra abilities. Well engineered.
 
 ## Contributing
 
@@ -100,4 +126,3 @@ Contributions to Gopher are welcome! If you find any issues or have suggestions 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
