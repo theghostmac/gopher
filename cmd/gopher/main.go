@@ -13,6 +13,7 @@ func main() {
 		Usage: "A tool for managing Go projects",
 		Commands: []*cli.Command{
 			commands.InitProjectCommand(),
+			commands.CheckProjectCommand(),
 			// TODO: add other commands here.
 		},
 		// TODO: other parameters.

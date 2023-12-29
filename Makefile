@@ -33,7 +33,8 @@ run:
 # Install the application
 install:
 	$(GOBUILD) -o $(BINARY_NAME) github.com/theghostmac/gopher/cmd/gopher
-	mv $(BINARY_NAME) $(GOPATH)/bin/$(BINARY_NAME)
+	#mv $(BINARY_NAME) $(GOPATH)/bin/$(BINARY_NAME)
+	mv gopher /Users/macbobbychibuzor/go/bin/gopher
 
 # Uninstall the application
 uninstall:
