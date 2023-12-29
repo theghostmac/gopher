@@ -14,6 +14,7 @@ func main() {
 		Commands: []*cli.Command{
 			commands.InitProjectCommand(),
 			commands.CheckProjectCommand(),
+			commands.TrackCommand(),
 			// TODO: add other commands here.
 		},
 		// TODO: other parameters.

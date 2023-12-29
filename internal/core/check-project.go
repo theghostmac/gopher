@@ -32,6 +32,8 @@ func CheckProject(cwd string) error {
 
 	cmd := exec.Command("go", "build", "-o", "/dev/null")
 	cmd.Dir = cwd
+	cmd.Stdout = os.Stdout // Print compilation output for debugging
+	cmd.Stderr = os.Stderr // Print error output for debugging
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
