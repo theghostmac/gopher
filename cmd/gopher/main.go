@@ -1,20 +1,25 @@
 package main
 
 import (
-	"fmt"
+	"github.com/theghostmac/gopher/internal/commands"
+	"github.com/urfave/cli/v2"
+	"log"
 	"os"
-
-	"github.com/theghostmac/gopher/internal/core/commands"
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		/// Print the usage info for the user.
-		fmt.Println("Usage: gopher <command> [arguments]")
-		os.Exit(0)
+	app := &cli.App{
+		Name:  "Gopher",
+		Usage: "A tool for managing Go projects",
+		Commands: []*cli.Command{
+			commands.InitProjectCommand(),
+			// TODO: add other commands here.
+		},
+		// TODO: other parameters.
 	}
 
-	command := os.Args[1]
-	args := os.Args[2:]
-	commands.ExecuteCommand(command, args)
+	err := app.Run(os.Args)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
