@@ -10,7 +10,7 @@ import (
 func TrackCommand() *cli.Command {
 	return &cli.Command{
 		Name:  "track",
-		Usage: "Track TODOs in the codebase",
+		Usage: "Track TODOs in the codebase to show progress",
 		Action: func(context *cli.Context) error {
 			cwd, err := os.Getwd()
 			if err != nil {
